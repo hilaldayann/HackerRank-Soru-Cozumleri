@@ -1,0 +1,49 @@
+#https://www.hackerrank.com/challenges/java-output-formatting/problem
+
+public static void main(String[] args) {
+       
+       System.out.println("================================");
+        Scanner scan = new Scanner(System.in);
+        for(int i=0; i<=2; i++)
+        {
+            String s = scan.next();
+            int sayi = scan.nextInt();
+            
+            int kelimeuzunlugu = s.length();
+            int boslukkalan = 15- kelimeuzunlugu;
+            
+            System.out.print(s);
+            
+            for (int j = 0; j < boslukkalan; j++) 
+            {
+                System.out.print(" ");
+            }                                             
+            
+            int sayac = 0;
+            int sayi2 = sayi;
+            while(sayi2>0)
+            {
+                sayi2 = sayi2/10;
+                sayac++;
+            }
+            if(sayac==1 || sayac==0)
+            {
+                System.out.println("00" + sayi);
+            }
+            else if(sayac==2)
+            {
+                System.out.println("0" + sayi);
+            }
+            else if(sayac==3)
+            {
+                System.out.println(sayi);
+            }
+            else
+            {
+                System.out.println("Yalnizca 0<=n<=999 arasindaki degerleri giriniz."); 
+            }
+        }
+        scan.close();
+        System.out.println("================================");
+    }
+    
