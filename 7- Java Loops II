@@ -1,0 +1,23 @@
+#https://www.hackerrank.com/challenges/java-loops/problem
+
+public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        int dondur = scan.nextInt();
+        
+        for (int i = 0; i < dondur; i++) 
+        {
+            int a = scan.nextInt();
+            int b = scan.nextInt();
+            int n = scan.nextInt(); 
+            
+            int sonuc = 0;
+            
+            for (int j = 0; j < n; j++) 
+            {
+                sonuc = sonuc + ((int)(Math.pow(2,j)))*b;
+                System.out.printf("%d ", sonuc + a);
+            }
+            System.out.println();
+        }
+    }
