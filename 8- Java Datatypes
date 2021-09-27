@@ -1,0 +1,35 @@
+#https://www.hackerrank.com/challenges/java-datatypes/problem
+
+public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        int toplamdeger = scan.nextInt();
+        
+        for (int i = 0; i < toplamdeger; i++) 
+        {
+            try{
+                long deger = scan.nextLong();
+                System.out.println(deger + " can be fitted in:");
+
+                    if(deger >= -128 && deger <= 127)
+                    {
+                        System.out.println("* byte");
+                    }
+                    if(deger >= (short)(-(Math.pow(2,15))) && deger <= (short)((Math.pow(2,15))-1))
+                    {
+                        System.out.println("* short");
+                    }
+                    if(deger >= (int)(-(Math.pow(2,31))) && deger <= (int)((Math.pow(2,31))-1))
+                    {
+                        System.out.println("* int");
+                    }
+                    if(deger >= (long)(-(Math.pow(2,63))) && deger <= (long)((Math.pow(2,63))-1))
+                    {
+                        System.out.println("* long"); 
+                    }
+            }
+            catch(Exception e){
+                System.out.println( scan.next() + " can't be fitted anywhere.");  
+            }    
+        }
+        
