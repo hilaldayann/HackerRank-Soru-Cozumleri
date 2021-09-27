@@ -1,6 +1,7 @@
 #https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem
 
-Scanner scan = new Scanner(System.in);
+public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         int a;
         
         a = scan.nextInt();
@@ -11,3 +12,4 @@ Scanner scan = new Scanner(System.in);
         
         a = scan.nextInt();
         System.out.println(a);
+    }
