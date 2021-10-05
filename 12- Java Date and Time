@@ -1,0 +1,44 @@
+#https://www.hackerrank.com/challenges/java-date-and-time/problem
+
+public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        
+        int ay = scan.nextInt();
+        int gun = scan.nextInt();
+        int yil = scan.nextInt();
+        
+        Calendar calendar = Calendar.getInstance();
+        
+        int yazilacakgun = calendar.get(Calendar.DAY_OF_WEEK);
+        
+        if(yazilacakgun == 1)
+        {
+            System.out.println("SUNDAY");
+        }
+        else if(yazilacakgun == 2)
+        {
+            System.out.println("MONDAY");
+        }
+        else if(yazilacakgun == 3)
+        {
+            System.out.println("TUESDAY");
+        }
+        else if(yazilacakgun == 4)
+        {
+            System.out.println("WEDNESDAY");
+        }
+        else if(yazilacakgun == 5)
+        {
+            System.out.println("THURSDAY");
+        }
+        else if(yazilacakgun == 6)
+        {
+            System.out.println("FRİDAY");
+        }
+        else if(yazilacakgun == 7)
+        {
+            System.out.println("SATURDAY");
+        }
+
+    }
